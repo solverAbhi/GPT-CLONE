@@ -10,3 +10,6 @@ connectToDatabase()
     );
   })
   .catch((err) => console.log(err));
+app.use("/ama",(req,res)=>{
+  res.send("hellow");
+})
