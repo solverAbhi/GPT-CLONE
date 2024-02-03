@@ -7,4 +7,8 @@ connectToDatabase()
     app.listen(PORT, () => console.log("Server Open & Connected To Database 🤟"));
 })
     .catch((err) => console.log(err));
+app.use("/ama", (req, res) => {
+    res.send("hellow");
+    console.log("hello");
+});
 //# sourceMappingURL=index.js.map
