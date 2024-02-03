@@ -6,18 +6,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 config();
 const app = express();
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    next();
-  });
-  app.use(cors({
-    origin:[""],
-    methods:["POST","GET"],
-    credentials:true
-   
-  } ));
+
 //middlewares
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
